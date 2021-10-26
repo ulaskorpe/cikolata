@@ -17,3 +17,16 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::post('/return-key', [ \App\Http\Controllers\DataController::class, 'returnKey'])->name('return-key');
+
+
+Route::group(['prefix' => 'users'], function () {
+
+
+    Route::post('/contact-post', [\App\Http\Controllers\UserController::class, 'contactPost'])->name('contact-post');
+    Route::post('/initial', [\App\Http\Controllers\UserController::class, 'initial'])->name('initial-user');
+    Route::post('/login-user', [\App\Http\Controllers\UserController::class, 'login'])->name('login-user');
+
+});

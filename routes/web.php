@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+ //   return view('welcome');
+    //return md5('cikolata_api');
 });
 
 Auth::routes();
