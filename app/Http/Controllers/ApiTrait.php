@@ -7,6 +7,8 @@
  */
 
 namespace App\Http\Controllers;
+use App\Models\Country;
+use App\Models\Tmp;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -15,7 +17,15 @@ trait ApiTrait
     private  function generateKey(){
         return md5('cikolata_api');
     }
-
+    private function generateOrderId(){
+        $pin = "";
+        $ch = true;
+        while( $ch){
+            $pin = $this->randomPassword(8,1);
+            $ch = ($this->checkUnique('order_id','user_orders',$pin))? true : false;
+        }
+        return $pin;
+    }
     private function randomPassword($len = 16,$alphabet=0) {
         if($alphabet==1){
             $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
@@ -106,14 +116,25 @@ trait ApiTrait
     }
 
     private function getPayment($kk=0,$expires= null,$cvc=0){
-        $expires = ($expires == null )?Carbon::now()->format('Y-m-d'):Carbon::parse($expires)->format('Y-m-d');
-        if(!$this->isDigits($kk) || $kk < 1000000000000000 || $expires <= Carbon::now()->format('Y-m-d')
-            || !$this->isDigits($cvc) || $cvc <100){
-            return false;
+//        $expires = ($expires == null )?Carbon::now()->format('Y-m-d'):Carbon::parse($expires)->format('Y-m-d');
+
+//return  ($expires <= Carbon::now()->format('Y-m-d')) ? 1:0 ;
+//return (is_int(intval($cvc)))?1:0;
+        if(!is_int(intval($kk)) || strlen($kk)!=16 || ($expires <= Carbon::now()->format('Y-m-d'))
+            || !is_int(intval($cvc)) || strlen($cvc)!=3){
+            return 0;
         }else{
-            return true;
+            return 1;
         }
 
+    }
+
+    private function makeTmp($title=null,$data=null) {
+
+        $tmp = new Tmp();
+        $tmp->title = $title;
+        $tmp->data = $data;
+        $tmp->save();
     }
 
 }

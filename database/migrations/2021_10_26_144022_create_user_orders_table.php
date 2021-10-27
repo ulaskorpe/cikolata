@@ -17,9 +17,10 @@ class CreateUserOrdersTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('product_id');
+            $table->string('order_id')->unique();
             $table->dateTime('datetime');
-            $table->dateTime('expires');
-            $table->enum('status',['accepted','expired','cancelled'])->default('accepted');
+          //  $table->dateTime('expires');
+            $table->enum('status',['accepted','expired','cancelled','renewed'])->default('accepted');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -31,7 +31,7 @@ class CreateUsersTable extends Migration
             $table->enum('lang',['en','tr'])->default('en');
             $table->boolean('is_active')->default(0);
             $table->enum('type',['standart','premium'])->default('standart');
-            $table->dateTime('expires')->default(null);
+            $table->dateTime('expires')->default(\Carbon\Carbon::now());
             $table->softDeletes();
             $table->timestamps();
         });

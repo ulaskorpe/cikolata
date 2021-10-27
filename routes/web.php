@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -13,12 +14,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Auth::routes();
 
-Route::get('/', function () {
- //   return view('welcome');
-    //return md5('cikolata_api');
-});
-
-Auth::routes();
-
+Route::get('/', [App\Http\Controllers\HomeController::class, 'main'])->name('main');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/backup', [App\Http\Controllers\HomeController::class, 'backup_database'])->name('backup');

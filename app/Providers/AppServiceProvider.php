@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\UserOrder;
+use App\Models\UserVerify;
+use App\Observers\UserOrderObserver;
+use App\Observers\UserVerifyObserver;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        UserOrder::observe(UserOrderObserver::class);
+        UserVerify::observe(UserVerifyObserver::class);
     }
 }
