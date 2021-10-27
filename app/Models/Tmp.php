@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Tmp extends Model
 {
     use HasFactory;
-    protected $table = 'tmp';
+    protected $table = 'tmp_table';
     protected $fillable = ['title','data'];
 }

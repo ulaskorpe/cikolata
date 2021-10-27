@@ -1,0 +1,766 @@
+{
+	"info": {
+		"_postman_id": "3488e27b-6491-4e35-991d-301678d62998",
+		"name": "cikolata",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "data",
+			"item": [
+				{
+					"name": "return-key",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"type": "text",
+								"value": "bb34c6fe9d3377586d8d91ec8c02349f"
+							},
+							{
+								"key": "lang",
+								"type": "text",
+								"value": "tr"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url_local}}api/return-key",
+							"host": [
+								"{{url_local}}api"
+							],
+							"path": [
+								"return-key"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "country-list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"type": "text",
+								"value": "bb34c6fe9d3377586d8d91ec8c02349f"
+							},
+							{
+								"key": "lang",
+								"type": "text",
+								"value": "tr"
+							},
+							{
+								"key": "device-id",
+								"type": "text",
+								"value": "device-id##"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "app-id",
+								"value": "159951",
+								"type": "text"
+							},
+							{
+								"key": "os",
+								"value": "android smt ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url_local}}api/country-list",
+							"host": [
+								"{{url_local}}api"
+							],
+							"path": [
+								"country-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product-list",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"type": "text",
+								"value": "bb34c6fe9d3377586d8d91ec8c02349f"
+							},
+							{
+								"key": "lang",
+								"type": "text",
+								"value": "tr"
+							},
+							{
+								"key": "device-id",
+								"type": "text",
+								"value": "device-id##"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "app-id",
+								"type": "text",
+								"value": "159951"
+							},
+							{
+								"key": "os",
+								"type": "text",
+								"value": "android smt "
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url_local}}api/product-list",
+							"host": [
+								"{{url_local}}api"
+							],
+							"path": [
+								"product-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "initial-register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "bb34c6fe9d3377586d8d91ec8c02349f"
+					},
+					{
+						"key": "lang",
+						"type": "text",
+						"value": "tr"
+					},
+					{
+						"key": "device-id",
+						"type": "text",
+						"value": "device-id##"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "app-id",
+						"value": "159951",
+						"type": "text"
+					},
+					{
+						"key": "os",
+						"value": "android smt ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url_local}}api/users/initial",
+					"host": [
+						"{{url_local}}api"
+					],
+					"path": [
+						"users",
+						"initial"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify-email-or-phonenumber",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "bb34c6fe9d3377586d8d91ec8c02349f"
+					},
+					{
+						"key": "lang",
+						"type": "text",
+						"value": "tr"
+					},
+					{
+						"key": "device-id",
+						"type": "text",
+						"value": "device-id##"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "app-id",
+						"type": "text",
+						"value": "159951"
+					},
+					{
+						"key": "os",
+						"type": "text",
+						"value": "android smt "
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "sMdKlcoTp7sDwzLH",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "email",
+							"type": "text"
+						},
+						{
+							"key": "pin",
+							"value": "306559",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_local}}api/users/verify",
+					"host": [
+						"{{url_local}}api"
+					],
+					"path": [
+						"users",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "switch-active-status-for-user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "bb34c6fe9d3377586d8d91ec8c02349f"
+					},
+					{
+						"key": "lang",
+						"type": "text",
+						"value": "tr"
+					},
+					{
+						"key": "device-id",
+						"type": "text",
+						"value": "device-id##"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "app-id",
+						"type": "text",
+						"value": "159951"
+					},
+					{
+						"key": "os",
+						"type": "text",
+						"value": "android smt "
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "UVkGIR3AgIrGXJgV",
+							"type": "text"
+						},
+						{
+							"key": "is_active",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_local}}api/users/switch-active",
+					"host": [
+						"{{url_local}}api"
+					],
+					"path": [
+						"users",
+						"switch-active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchase-order",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "bb34c6fe9d3377586d8d91ec8c02349f"
+					},
+					{
+						"key": "lang",
+						"type": "text",
+						"value": "tr"
+					},
+					{
+						"key": "device-id",
+						"type": "text",
+						"value": "device-id##"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "app-id",
+						"type": "text",
+						"value": "159951"
+					},
+					{
+						"key": "os",
+						"type": "text",
+						"value": "android smt "
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "D68r85TRbkDEyp5S",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "kk",
+							"value": "1111111111111113",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "02",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2022",
+							"type": "text"
+						},
+						{
+							"key": "cvc",
+							"value": "333",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_local}}api/orders/purchase",
+					"host": [
+						"{{url_local}}api"
+					],
+					"path": [
+						"orders",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel-order",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "bb34c6fe9d3377586d8d91ec8c02349f"
+					},
+					{
+						"key": "lang",
+						"type": "text",
+						"value": "tr"
+					},
+					{
+						"key": "device-id",
+						"type": "text",
+						"value": "device-id##"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "app-id",
+						"type": "text",
+						"value": "159951"
+					},
+					{
+						"key": "os",
+						"type": "text",
+						"value": "android smt "
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "D68r85TRbkDEyp5S",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "8y7ZZJF5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_local}}api/orders/cancel",
+					"host": [
+						"{{url_local}}api"
+					],
+					"path": [
+						"orders",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "renew-order",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "bb34c6fe9d3377586d8d91ec8c02349f"
+					},
+					{
+						"key": "lang",
+						"type": "text",
+						"value": "tr"
+					},
+					{
+						"key": "device-id",
+						"type": "text",
+						"value": "device-id##"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "app-id",
+						"type": "text",
+						"value": "159951"
+					},
+					{
+						"key": "os",
+						"type": "text",
+						"value": "android smt "
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "D68r85TRbkDEyp5S",
+							"type": "text"
+						},
+						{
+							"key": "order_id",
+							"value": "4tbzLR6l",
+							"type": "text"
+						},
+						{
+							"key": "kk",
+							"value": "5555555555555555",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2024",
+							"type": "text"
+						},
+						{
+							"key": "cvc",
+							"value": "223",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_local}}api/orders/renew",
+					"host": [
+						"{{url_local}}api"
+					],
+					"path": [
+						"orders",
+						"renew"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login-user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "bb34c6fe9d3377586d8d91ec8c02349f"
+					},
+					{
+						"key": "lang",
+						"type": "text",
+						"value": "tr"
+					},
+					{
+						"key": "device-id",
+						"type": "text",
+						"value": "device-id##"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "app-id",
+						"value": "2222",
+						"type": "text"
+					},
+					{
+						"key": "os",
+						"value": "ssaa",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "D68r85TRbkDEyp5S",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_local}}api/users/login-user",
+					"host": [
+						"{{url_local}}api"
+					],
+					"path": [
+						"users",
+						"login-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "bb34c6fe9d3377586d8d91ec8c02349f"
+					},
+					{
+						"key": "lang",
+						"type": "text",
+						"value": "tr"
+					},
+					{
+						"key": "device-id",
+						"type": "text",
+						"value": "device-id##"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ulaş",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "KÖRPE",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sss@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone_code",
+							"value": "90",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "5066063011",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "D68r85TRbkDEyp5S",
+							"type": "text"
+						},
+						{
+							"key": "country_id",
+							"value": "223",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url_local}}api/users/update",
+					"host": [
+						"{{url_local}}api"
+					],
+					"path": [
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

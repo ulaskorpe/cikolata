@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -87,6 +89,9 @@ class HomeController extends Controller
      */
     public function main()
     {
+
+      //  User::where('is_active','=',1)->update(['expires'=>Carbon::now()]);
+
         $array =array();
         $tables = DB::select('SHOW TABLES');
         foreach ($tables as $table) {

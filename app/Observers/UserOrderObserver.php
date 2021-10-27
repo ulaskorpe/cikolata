@@ -25,12 +25,7 @@ class UserOrderObserver
         User::where('id','=',$userOrder->user()->first()->id)
             ->update(['type'=>'premium','expires'=>$expires]);
 
-        if($userOrder->isDirty('status')){
-            // email has changed
-            $new_email = $userOrder->email;
-            $old_email = $userOrder->getOriginal('email');
-            $this->makeTmp("create".$new_email,$old_email);
-        }
+
 //2021-10-26 20:08:15.000000
     }
 
